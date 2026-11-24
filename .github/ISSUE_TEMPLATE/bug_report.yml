@@ -1,0 +1,46 @@
+name: Bug Report
+description: Report a rendering issue, crash, or bug in OptiLuman
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue! Please fill in your hardware details and attach screenshots or `latest.log`.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Load world with shader pack X
+        2. Enable setting Y
+        3. Look at water / blocks
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU & Driver Version
+      placeholder: e.g. NVIDIA RTX 5070 Ti / Driver 572.xx
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: OptiLuman & Shader Pack Version
+      placeholder: e.g. OptiLuman 0.1.0-alpha, OptiLuman-Example 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Crash Report
+      description: Paste relevant lines or drag-and-drop `latest.log` / crash report file here.
+      render: text
